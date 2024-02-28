@@ -6,7 +6,7 @@ class Bing:
     def __init__(self) -> None:
         self.die=False # This is a flag to tell the chatbot to stop
         # Create a new instance of the SydneyClient with the bing_u_cookie set to the value of the cookie you got from the Bing chatbot (If Microsoft reset the cookie, you will need to get a new one from the Bing chatbot)
-        self.sydney=SydneyClient(bing_u_cookie= "1scZqEuvQazNDG15lRwi2Qu81G6cXfujIBjhl_aoe_Mqdie7kZ_cqQAhQhUuvQPCsXCYXynh5tnAJa36959_UF2uyk_A_IP55kAdOqEvOTRPdevUFE40KuTlcx0dFQndbm8W57L8Of7bSaWIrDfdWt4czekU7xCNBSghxeheC_p6U3-BFOHAXx88zy1eYghIsBsh7JZwa1nNwPAq2xfTwVqQgEaiW25UDvPURFf4Bd9Q")
+        self.sydney=SydneyClient(bing_u_cookie= "12k59GNNqIb6eQcxj1j_OflRGJwQXjauLtrbqswAdoSB3ERXvRLt95bxB8buE9B5MyoETbXVn8jHXljOVWET-RTCORJhoAybvKMtTaiO1uH4t2RtqeZmtmHs_7OzqVbmMBpTidKQ16XK0IyC_9Z_DDoNWuFm5B4ZpfrHa6anl513-Io2BhPzD_HqjHtzU6EqecxcV-P1yi-jp1CWOuMDcj9n5R_3-itU5aW67-ve5llE")
     
     async def enter(self):
         await self.sydney.__aenter__()
