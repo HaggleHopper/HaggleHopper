@@ -86,42 +86,7 @@ class SydneyClient:
         ]
         for style in style_options:
             options_sets.append(style.strip())
-        if file:
-            return {
-            "arguments": [
-                {
-                    "source": "cib",
-                    "optionsSets": options_sets,
-                    "isStartOfSession": self.invocation_id == 0,
-                    "message": {
-                        "author": "user",
-                        "inputMethod": "Keyboard",
-                        "text": prompt,
-                        "messageType": MessageType.CHAT.value,
-                    },
-                    "conversationSignature": self.conversation_signature,
-                    "participant": {
-                        "id": self.client_id,
-                    },
-                    "conversationId": self.conversation_id,
-                    "previousMessages":[
-                        {
-                            "author":"user",
-                            "description":file,
-                            "contextType":"WebPage",
-                            "messageType":"Context",
-                            "sourceName":"currentFile.pdf",
-                            "sourceUrl":"file:///C:/Users/dweglowski/OneDrive%20-%20The%20Perse%20School/Desktop/Code/Copilot/StoredFiles/currentFile.pdf",
-                            "locale":"",
-                            "privacy":"Internal"
-                            }
-                        ]
-                }
-            ],
-            "invocationId": str(self.invocation_id),
-            "target": "chat",
-            "type": 4,
-        }
+        
         return {
             "arguments": [
                 {
@@ -360,7 +325,7 @@ class SydneyClient:
         Connect to Bing Chat and create a new conversation.
         """
         # Use _U cookie to create a conversation.
-        cookies = {"_U": self.bing_u_cookie,"SRCHHPGUSR":"SRCHLANG=en&BRW=HTP&BRH=M&CW=880&CH=787&SCW=880&SCH=112&DPR=2.0&UTC=0&DM=1&EXLTT=3&HV=1707555689&WTS=63843152290&PRVCW=1368&PRVCH=787&CIBV=1.1573.3",}
+        cookies = {"_U": self.bing_u_cookie,"SRCHHPGUSR":"SRCHLANG=en&BRW=NOTP&BRH=M&CW=800&CH=787&SCW=800&SCH=112&DPR=2.0&UTC=0&DM=1&EXLTT=3&HV=1709127539&WTS=63844724254&PRVCW=1368&PRVCH=787&CIBV=1.1586.1",}
         session = ClientSession(
             headers=HEADERS,
             cookies=cookies,
